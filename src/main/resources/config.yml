@@ -1,0 +1,14 @@
+# Поддерживает HEX
+# https://github.com/necatiq
+
+notification-on-rejoin-enabled: true #Если игрок вышел с шалкерами, то при следующем его заходе ему напишет в чат, что шалкеры выпали.
+action-bar-enabled: true #Сообщение в ActionBar
+drop-shulkers-on-logout: true #Выкидывать ли шалкеры при выходе
+drop-distance: 3.0 # Дистанция дропа шалкеров (в блоках)
+drop-height: 0.5 # Высота над землей, на которой будут выпадать шалкеры (не трогаем)
+
+messages:
+  actionbar-warning: "&#FF7F50 Внимание! &fУ вас в инвентаре есть шалкеры, при выходе они &#FF4040выпадут"
+
+  # %count% - кол-во шалкеров
+  shulkers-dropped-notification: "&#FF7F50&l[!] &fПри вашем последнем выходе из игры выпало &#FF4040%count% &fшалкеров"

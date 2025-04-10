@@ -1,0 +1,4 @@
+name: EBshulkerlogout
+version: '${project.version}'
+main: exp.eightbytef.ebshulkerlogout.EBshulkerlogout
+api-version: '1.16'
