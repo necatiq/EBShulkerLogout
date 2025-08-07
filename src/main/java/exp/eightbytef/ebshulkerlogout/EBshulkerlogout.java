@@ -27,7 +27,7 @@ import java.util.Random;
 public final class EBshulkerlogout extends JavaPlugin implements @NotNull Listener {
 
     private static EBshulkerlogout instance;
-    private final List<Material> SHULKER_BOXES = Arrays.asList( //Тут я хотел сделать иначе, не списком, но по другому не придумал
+    private final List<Material> SHULKER_BOXES = Arrays.asList(
             Material.SHULKER_BOX,
             Material.WHITE_SHULKER_BOX,
             Material.ORANGE_SHULKER_BOX,
@@ -183,8 +183,7 @@ public final class EBshulkerlogout extends JavaPlugin implements @NotNull Listen
         try {
             player.sendActionBar(net.md_5.bungee.api.ChatColor.translateAlternateColorCodes('&', message));
         } catch (NoSuchMethodError e) {
-            try { //Очередная ебаталогия, нахуя я её добавил вообще. Хотя не мне хуже, этот говнокод я всё равно у какого то типа спиздил
-                //Ссаться не надо, эта херня вызывается тогда, когда просто выходит ошибка про actionbar.
+            try {
                 Class<?> craftPlayerClass = Bukkit.getServer().getClass().getDeclaredMethod("getHandle").getReturnType();
                 Object craftPlayer = player.getClass().getMethod("getHandle").invoke(player);
                 Object packet = Class.forName("net.minecraft.server." + getServerVersion() + ".PacketPlayOutChat")
